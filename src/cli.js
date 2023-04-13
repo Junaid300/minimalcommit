@@ -2,12 +2,19 @@ import inquirer from "inquirer";
 import chalk from "chalk";
 
 import { commitFiles, getStagedFiles, checkIfRepoisGit } from "./commands.js";
+import { commitTypes } from "./constants/commit-type.js";
 
 function logOption(title, description) {
   return chalk.bgWhite(title) + " - " + description;
 }
 
 async function cli() {
+
+  commitTypes.map((type)=>(
+    console.log( type.name=="Style"?chalk['bgWhite'](`${type.description}`):(`${type.description}`))
+  )
+  
+  )
   const res = await checkIfRepoisGit() && await getStagedFiles();
   if (res) {
     return await inquirer

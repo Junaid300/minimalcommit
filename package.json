@@ -4,7 +4,8 @@
   "description": "A minimalist approach toward git commits to keep things simple.",
   "main": "./bin/index.js",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "mct": "bin/index.js"
   },
   "bin": {
     "mct": "bin/index.js"
@@ -28,7 +29,8 @@
   "homepage": "https://github.com/khattakdev/minimalcommit#readme",
   "dependencies": {
     "chalk": "^5.2.0",
-    "inquirer": "^9.1.5"
+    "inquirer": "^9.1.5",
+    "yargs": "^17.7.1"
   },
   "devDependencies": {
     "eslint": "^8.37.0",
